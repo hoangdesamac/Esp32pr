@@ -14,8 +14,15 @@
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr1",
-      "top": 262.4,
-      "left": -56.8,
+      "top": 377.6,
+      "left": -66.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr2",
+      "top": 252.8,
+      "left": -66.4,
       "attrs": {}
     }
   ],
@@ -28,7 +35,10 @@
     [ "lcd1:SCL", "esp:22", "green", [ "h-48", "v19.5" ] ],
     [ "ldr1:VCC", "esp:5V", "red", [ "h0" ] ],
     [ "ldr1:GND", "esp:GND.2", "black", [ "h-105.6", "v-259.6" ] ],
-    [ "esp:27", "ldr1:DO", "green", [ "h-19.05", "v144", "h0", "v28.8", "h211.2" ] ]
+    [ "ldr2:VCC", "esp:5V", "red", [ "h0" ] ],
+    [ "ldr2:GND", "esp:GND.2", "black", [ "h-96", "v-336.4" ] ],
+    [ "ldr2:DO", "esp:27", "green", [ "h-220.8", "v-250.2" ] ],
+    [ "esp:14", "ldr1:DO", "green", [ "h-19.05", "v48" ] ]
   ],
   "dependencies": {}
 }
