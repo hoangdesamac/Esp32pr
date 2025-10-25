@@ -1,0 +1,5 @@
+				Giao tiếp qua esp32 khối cảm biến
+LDR:	GIOP:27		IO_MUX_GPIO27_REG Configuration register for GPIO27 0x3FF4902C R/W
+RAINL:	GIOP:26		IO_MUX_GPIO26_REG Configuration register for GPIO26 0x3FF49028 R/W
+LCD:	GIOP:21-SD
+GIOP:22-SCL
