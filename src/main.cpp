@@ -2,6 +2,7 @@
 #include <LiquidCrystal_I2C.h>
 #include "gpio_driver.h"
 #include "serial_driver.h"
+#include "delay_driver.h"
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 const uint8_t LDR_DO = 27;
@@ -20,5 +21,5 @@ void loop() {
     lcd.setCursor(11,0);
     lcd.print(value);
     lcd.print(' ');
-    delay(500);
+    delay_custom(500);
 }
