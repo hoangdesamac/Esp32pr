@@ -14,16 +14,31 @@
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr1",
-      "top": 377.6,
-      "left": -66.4,
+      "top": 300.8,
+      "left": -56.8,
       "attrs": {}
     },
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr2",
-      "top": 252.8,
-      "left": -66.4,
+      "top": 233.6,
+      "left": -56.8,
       "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 136,
+      "left": 157.8,
+      "rotate": 180,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 205.55,
+      "left": 28.8,
+      "attrs": { "value": "220" }
     }
   ],
   "connections": [
@@ -38,7 +53,15 @@
     [ "ldr2:VCC", "esp:5V", "red", [ "h0" ] ],
     [ "ldr2:GND", "esp:GND.2", "black", [ "h-96", "v-336.4" ] ],
     [ "ldr2:DO", "esp:27", "green", [ "h-220.8", "v-250.2" ] ],
-    [ "esp:14", "ldr1:DO", "green", [ "h-19.05", "v48" ] ]
+    [ "esp:14", "ldr1:DO", "green", [ "h-19.05", "v48" ] ],
+    [
+      "led1:C",
+      "esp:GND.2",
+      "green",
+      [ "v-19.2", "h-134.8", "v-86.4", "h0", "v-28.8", "h-67.2", "v19.2" ]
+    ],
+    [ "led1:A", "r1:2", "green", [ "v0", "h-76.8" ] ],
+    [ "r1:1", "esp:2", "green", [ "v-48" ] ]
   ],
   "dependencies": {}
 }
