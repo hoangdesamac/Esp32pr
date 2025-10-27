@@ -1,0 +1,4 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Users\Admin\.platformio\packages\python_env\idf5.5_py3.11_env\Scripts\python.exe -DESP_PLATFORM=1 -DIDF_TARGET=esp32 -DCCACHE_ENABLE=0 T:\Projects\DACS2\Esp32pr
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository: C:/Users/Admin/.platformio/packages/framework-espidf/components/openthread/openthread/../../../.git/modules/components/openthread/openthread

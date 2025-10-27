@@ -22,7 +22,7 @@ void setup()
     
     // LCD khởi tạo
     lcd.init();
-    lcd.backlight();
+    lcd.backlight(); // Bật backlight
     lcd.setCursor(0, 0);
     lcd.print("Initializing...");
 
@@ -47,10 +47,9 @@ void setup()
     // LCD khởi tạo lại
     lcd.clear();
     lcd.setCursor(0, 0);
-    lcd.print("LDR:");
+    lcd.print("LDR:     ");   // Thêm khoảng trắng để xóa dữ liệu cũ
     lcd.setCursor(0, 1);
-    lcd.print("RAIN:");
-    
+    lcd.print("RAIN:    "); 
     Serial.println("=== SETUP COMPLETE ===\n");
 }
 
@@ -70,7 +69,7 @@ void loop()
     Serial.print(valueRAIN == HIGH ? "HIGH" : "LOW");
     Serial.print(") | ");
 
-    // Logic điều khiển
+    // Logic điều khiển motor
     if (valueLDR == HIGH || valueRAIN == HIGH)
     {
         digitalWrite_custom(MOTOR_PIN, HIGH);
@@ -84,9 +83,14 @@ void loop()
 
     // Hiển thị LCD
     lcd.setCursor(5, 0);
-    lcd.print(valueLDR ? "HIGH" : "LOW ");
+    lcd.print("     "); // Xóa dữ liệu cũ
+    lcd.setCursor(5, 0);
+    lcd.print(valueLDR == HIGH ? "HIGH" : "LOW");
+
     lcd.setCursor(5, 1);
-    lcd.print(valueRAIN ? "HIGH" : "LOW ");
+    lcd.print("     "); // Xóa dữ liệu cũ
+    lcd.setCursor(5, 1);
+    lcd.print(valueRAIN == HIGH ? "HIGH" : "LOW");
 
     delay_custom(500);
 }

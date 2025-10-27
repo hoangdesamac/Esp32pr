@@ -1,5 +1,2 @@
 CompileFlags:
-  Add: [
-    "-I:/Projects/DACS2/Esp32pr/.pio/libdeps/esp32dev",
-    "-I/path/to/toolchain/include"
-  ]
+    Remove: [-f*, -m*]

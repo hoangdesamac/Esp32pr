@@ -1,0 +1,2 @@
+source T:/Projects/DACS2/Esp32pr/build/gdbinit/symbols
+source T:/Projects/DACS2/Esp32pr/build/gdbinit/connect

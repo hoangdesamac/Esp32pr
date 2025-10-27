@@ -1,3 +1,12 @@
 {
-    "auto-scroll.enabled": false
+  "auto-scroll.enabled": false,
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32"
+  },
+  "clangd.path": "C:\\Users\\Admin\\.platformio\\packages\\tools\\esp-clang\\esp-19.1.2_20250312\\esp-clang\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=C:\\Users\\Admin\\.platformio\\packages\\tools\\xtensa-esp-elf\\esp-14.2.0_20241119\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe",
+    "--compile-commands-dir=t:\\Projects\\DACS2\\Esp32pr\\build"
+  ]
 }
