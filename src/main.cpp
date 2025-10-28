@@ -1,5 +1,5 @@
-// HIGHT = Mưa/Tối 
-// LOW   = Không Mưa / Sáng
+// HIGHT = Không Mưa/Tối 
+// LOW   = Mưa / Sáng
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include "gpio_driver.h"
@@ -25,7 +25,7 @@ void setup()
     lcd.backlight(); // Bật backlight
     lcd.setCursor(0, 0);
     lcd.print("Initializing...");
-
+    
     // Cấu hình chân I/O
     Serial.println("Configuring GPIO pins...");
     pinMode_custom(LDR_DO, PIN_INPUT);
@@ -62,15 +62,16 @@ void loop()
     Serial.print("LDR=");
     Serial.print(valueLDR);
     Serial.print(" (");
-    Serial.print(valueLDR == HIGH ? "HIGH" : "LOW");
+    Serial.print(valueLDR == HIGH ? "DARK" : "LIGHT"); // Sửa lại để dễ hiểu hơn
     Serial.print(") | RAIN=");
     Serial.print(valueRAIN);
     Serial.print(" (");
-    Serial.print(valueRAIN == HIGH ? "HIGH" : "LOW");
+    Serial.print(valueRAIN == LOW ? "RAIN" : "NO RAIN"); // Sửa lại để dễ hiểu hơn
     Serial.print(") | ");
 
     // Logic điều khiển motor
-    if (valueLDR == HIGH || valueRAIN == HIGH)
+    // Bật motor khi trời tối (LDR HIGH) hoặc khi trời mưa (RAIN LOW)
+    if (valueLDR == HIGH || valueRAIN == LOW)
     {
         digitalWrite_custom(MOTOR_PIN, HIGH);
         Serial.println("=> MOTOR ON");
@@ -83,14 +84,16 @@ void loop()
 
     // Hiển thị LCD
     lcd.setCursor(5, 0);
-    lcd.print("     "); // Xóa dữ liệu cũ
+    lcd.print("       "); // Xóa dữ liệu cũ
     lcd.setCursor(5, 0);
-    lcd.print(valueLDR == HIGH ? "HIGH" : "LOW");
+    // Dựa theo comment: HIGH là Tối, LOW là Sáng
+    lcd.print(valueLDR == HIGH ? "DARK" : "LIGHT");
 
     lcd.setCursor(5, 1);
-    lcd.print("     "); // Xóa dữ liệu cũ
+    lcd.print("       "); // Xóa dữ liệu cũ
     lcd.setCursor(5, 1);
-    lcd.print(valueRAIN == HIGH ? "HIGH" : "LOW");
+    // Dựa theo comment: LOW là Mưa
+    lcd.print(valueRAIN == LOW ? "RAIN" : "NO RAIN");
 
     delay_custom(500);
 }
