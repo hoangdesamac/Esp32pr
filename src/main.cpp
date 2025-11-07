@@ -9,7 +9,25 @@
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 const uint8_t LDR_DO = 27;
 const uint8_t RAIN_DO = 14;
+// ===== Motor Control via DRV8833 =====
+const uint8_t MOTOR_IN1 = 18;
+const uint8_t MOTOR_IN2 = 19;
 const uint8_t MOTOR_PIN = 2;
+// === MOTOR CONTROL FUNCTIONS ===
+void motorStop() {
+    digitalWrite_custom(MOTOR_IN1, LOW);
+    digitalWrite_custom(MOTOR_IN2, LOW);
+}
+
+void motorForward() {
+    digitalWrite_custom(MOTOR_IN1, HIGH);
+    digitalWrite_custom(MOTOR_IN2, LOW);
+}
+
+void motorReverse() {
+    digitalWrite_custom(MOTOR_IN1, LOW);
+    digitalWrite_custom(MOTOR_IN2, HIGH);
+}
 
 void setup()
 {
@@ -36,13 +54,24 @@ void setup()
     
     pinMode_custom(MOTOR_PIN, PIN_OUTPUT);
     Serial.println("MOTOR_PIN (GPIO 2) set as OUTPUT");
+
+    pinMode_custom(MOTOR_IN1, PIN_OUTPUT);
+    pinMode_custom(MOTOR_IN2, PIN_OUTPUT);
+    Serial.println("MOTOR_IN1 (GPIO 18) and MOTOR_IN2 (GPIO 19) set as OUTPUT");
+
     
-    // Test: Bật motor 2 giây
-    Serial.println("\n>>> TEST: Turning ON motor for 2 seconds...");
-    digitalWrite_custom(MOTOR_PIN, 1);
+        // Test: Quay motor 2 giây tiến, 2 giây lùi
+    Serial.println("\n>>> TEST: Motor forward 2s...");
+    motorForward();
     delay_custom(2000);
-    digitalWrite_custom(MOTOR_PIN, 0);
-    Serial.println(">>> Motor OFF\n");
+
+    Serial.println(">>> TEST: Motor reverse 2s...");
+    motorReverse();
+    delay_custom(2000);
+
+    motorStop();
+    Serial.println(">>> TEST: Motor stopped\n");
+
 
     // LCD khởi tạo lại
     lcd.clear();
@@ -69,28 +98,22 @@ void loop()
     Serial.print(valueRAIN == LOW ? "RAIN" : "NO RAIN"); // Sửa lại để dễ hiểu hơn
     Serial.print(") | ");
 
-    // Logic điều khiển motor
-    // Bật motor khi trời tối (LDR HIGH) hoặc khi trời mưa (RAIN LOW)
+        // Điều khiển motor qua DRV8833
     if (valueLDR == HIGH || valueRAIN == LOW)
     {
-        digitalWrite_custom(MOTOR_PIN, HIGH);
-        Serial.println("=> MOTOR ON");
+        motorReverse(); // Thu đồ
+        Serial.println("=> MOTOR: THU (reverse)");
     }
     else
     {
-        digitalWrite_custom(MOTOR_PIN, LOW);
-        Serial.println("=> MOTOR OFF");
+        motorForward(); // Phơi đồ
+        Serial.println("=> MOTOR: PHƠI (forward)");
     }
 
-    // Hiển thị LCD
-    lcd.setCursor(5, 0);
-    lcd.print("       "); // Xóa dữ liệu cũ
     lcd.setCursor(5, 0);
     // Dựa theo comment: HIGH là Tối, LOW là Sáng
     lcd.print(valueLDR == HIGH ? "DARK" : "LIGHT");
 
-    lcd.setCursor(5, 1);
-    lcd.print("       "); // Xóa dữ liệu cũ
     lcd.setCursor(5, 1);
     // Dựa theo comment: LOW là Mưa
     lcd.print(valueRAIN == LOW ? "RAIN" : "NO RAIN");
