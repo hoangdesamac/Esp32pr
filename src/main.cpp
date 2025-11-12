@@ -8,12 +8,12 @@
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // ===== INPUT SENSOR =====
-const uint8_t LDR_DO  = 26;   
-const uint8_t RAIN_DO = 14;   
+const uint8_t LDR_DO = 26;
+const uint8_t RAIN_DO = 14;
 
 // ===== LIMIT SWITCHES =====
-const uint8_t LIMIT_SWITCH_START = 25; 
-const uint8_t LIMIT_SWITCH_END   = 27; 
+const uint8_t LIMIT_SWITCH_START = 25;
+const uint8_t LIMIT_SWITCH_END = 27;
 
 // ===== MOTOR CONTROL DRV8833 =====
 const uint8_t MOTOR_IN1 = 18;
@@ -21,7 +21,8 @@ const uint8_t MOTOR_IN2 = 19;
 const uint8_t MOTOR_PIN = 2;
 
 // ===== Motor State=====
-enum MotorState {
+enum MotorState
+{
     MOTOR_STOPPED,
     MOTOR_FORWARD, // PHƠI đồ
     MOTOR_REVERSE  // THU đồ
@@ -31,27 +32,31 @@ MotorState currentMotorState = MOTOR_STOPPED;
 
 // ===== LATCH flags =====
 bool startLimitLatched = false;
-bool endLimitLatched   = false;
+bool endLimitLatched = false;
 
 // ===== MOTOR CONTROL =====
-void motorStop() {
+void motorStop()
+{
     digitalWrite_custom(MOTOR_IN1, LOW);
     digitalWrite_custom(MOTOR_IN2, LOW);
 }
 
-void motorForward() { // PHƠI đồ
+void motorForward()
+{ // PHƠI đồ
     digitalWrite_custom(MOTOR_IN1, HIGH);
     digitalWrite_custom(MOTOR_IN2, LOW);
 }
 
-void motorReverse() { // THU đồ
+void motorReverse()
+{ // THU đồ
     digitalWrite_custom(MOTOR_IN1, LOW);
     digitalWrite_custom(MOTOR_IN2, HIGH);
 }
 
-void setup() {
+void setup()
+{
     Serial.begin(9600);
-    delay(500);
+    delay(500); // 0.5s
 
     Wire.begin(21, 22);
     lcd.init();
@@ -78,13 +83,14 @@ void setup() {
     Serial.println("=== SETUP COMPLETE ===\n");
 }
 
-void loop() {
+void loop()
+{
     // ===== Read Sensor =====
-    int valueLDR  = digitalRead_custom(LDR_DO);
+    int valueLDR = digitalRead_custom(LDR_DO);
     int valueRAIN = digitalRead_custom(RAIN_DO);
     // ===== Read Limit Switches =====
     int startPressed = digitalRead(LIMIT_SWITCH_START);
-    int endPressed   = digitalRead(LIMIT_SWITCH_END);
+    int endPressed = digitalRead(LIMIT_SWITCH_END);
 
     // ===== Definite Motor Direction Logic =====
     MotorState desiredMotorState =
@@ -92,35 +98,46 @@ void loop() {
 
     // ===== Reset latch=====
     // (Reset Latch In Reverse Direction)
-    if (desiredMotorState == MOTOR_FORWARD && currentMotorState != MOTOR_FORWARD) {
+    if (desiredMotorState == MOTOR_FORWARD && currentMotorState != MOTOR_FORWARD)
+    {
         startLimitLatched = false;
     }
-    if (desiredMotorState == MOTOR_REVERSE && currentMotorState != MOTOR_REVERSE) {
+    if (desiredMotorState == MOTOR_REVERSE && currentMotorState != MOTOR_REVERSE)
+    {
         endLimitLatched = false;
     }
 
     // ===== Motor Stopped Logic For latch =====
     if ((desiredMotorState == MOTOR_REVERSE && startPressed && !startLimitLatched) ||
-        (desiredMotorState == MOTOR_FORWARD && endPressed && !endLimitLatched)) {
+        (desiredMotorState == MOTOR_FORWARD && endPressed && !endLimitLatched))
+    {
         motorStop();
         currentMotorState = MOTOR_STOPPED;
 
-        if (desiredMotorState == MOTOR_REVERSE) startLimitLatched = true;
-        if (desiredMotorState == MOTOR_FORWARD) endLimitLatched = true;
+        if (desiredMotorState == MOTOR_REVERSE)
+            startLimitLatched = true;
+        if (desiredMotorState == MOTOR_FORWARD)
+            endLimitLatched = true;
     }
     else if (currentMotorState == MOTOR_STOPPED &&
-             !startLimitLatched && !endLimitLatched) {
+            !startLimitLatched && !endLimitLatched)
+    {
         // Motor Run Without Latch
-        if (desiredMotorState == MOTOR_FORWARD) motorForward();
-        else motorReverse();
+        if (desiredMotorState == MOTOR_FORWARD)
+            motorForward();
+        else
+            motorReverse();
         currentMotorState = desiredMotorState;
     }
     else if (desiredMotorState != currentMotorState &&
-             !startLimitLatched && !endLimitLatched) {
+            !startLimitLatched && !endLimitLatched)
+    {
         motorStop();
-        delay_custom(500);
-        if (desiredMotorState == MOTOR_FORWARD) motorForward();
-        else motorReverse();
+        delay_custom(500); // 0.5s
+        if (desiredMotorState == MOTOR_FORWARD)
+            motorForward();
+        else
+            motorReverse();
         currentMotorState = desiredMotorState;
     }
 
@@ -134,5 +151,5 @@ void loop() {
     lcd.print(startPressed ? "STOP" : "OK  ");
     lcd.setCursor(12, 1);
     lcd.print(endPressed ? "STOP" : "OK  ");
-    delay_custom(300);
+    delay_custom(300); // 0.3s
 }

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e8e5cd53-d5de-4d05-823a-c1772f1ce67e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CMakeASMCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.30.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/bootloader.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/bootloader.dir/Labels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/bootloader.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/bootloader.dir/Labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/clean_additional.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/clean_additional.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/git-data/grabRef.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/git-data/grabRef.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/git-data/head-ref" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/git-data/head-ref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/sections.ld-d65dc84.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bootloader-prefix/src/bootloader-stamp/bootloader-source_dirinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/bootloader-prefix/src/bootloader-stamp/bootloader-source_dirinfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bootloader-prefix/tmp/bootloader-cfgcmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/bootloader-prefix/tmp/bootloader-cfgcmd.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bootloader-prefix/tmp/bootloader-mkdirs.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/bootloader-prefix/tmp/bootloader-mkdirs.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/compile_commands.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/config.env" beforeDir="false" afterPath="$PROJECT_DIR$/build/config.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/config/kconfig_menus.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/config/kconfig_menus.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/config/sdkconfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/config/sdkconfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/config/sdkconfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/build/config/sdkconfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/config/sdkconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/config/sdkconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/__pio_env/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/app_trace/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/app_trace/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/app_update/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/app_update/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/bootloader/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/bootloader/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/bootloader_support/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/bootloader_support/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/bt/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/bt/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/cmock/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/cmock/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/console/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/console/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/cxx/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/cxx/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/driver/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/driver/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/efuse/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/efuse/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp-tls/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp-tls/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_adc/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_adc/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_app_format/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_app_format/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_bootloader_format/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_bootloader_format/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_coex/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_coex/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_common/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_common/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_ana_cmpr/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_ana_cmpr/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_bitscrambler/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_bitscrambler/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_cam/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_cam/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_dac/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_dac/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_gpio/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_gpio/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_gptimer/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_gptimer/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_i2c/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_i2c/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_i2s/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_i2s/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_isp/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_isp/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_jpeg/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_jpeg/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_ledc/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_ledc/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_mcpwm/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_mcpwm/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_parlio/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_parlio/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_pcnt/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_pcnt/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_ppa/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_ppa/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_rmt/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_rmt/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_sdio/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_sdio/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_sdm/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_sdm/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_sdmmc/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_sdmmc/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_sdspi/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_sdspi/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_spi/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_spi/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_touch_sens/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_touch_sens/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_tsens/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_tsens/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_twai/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_twai/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_uart/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_uart/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_driver_usb_serial_jtag/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_driver_usb_serial_jtag/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_eth/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_eth/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_event/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_event/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_gdbstub/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_gdbstub/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_hid/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_hid/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_http_client/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_http_client/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_http_server/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_http_server/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_https_ota/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_https_ota/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_https_server/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_https_server/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_hw_support/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_hw_support/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_hw_support/lowpower/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_hw_support/lowpower/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_hw_support/port/esp32/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_hw_support/port/esp32/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_lcd/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_lcd/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_local_ctrl/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_local_ctrl/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_mm/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_mm/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_netif/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_netif/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_netif_stack/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_netif_stack/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_partition/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_partition/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_phy/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_phy/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_pm/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_pm/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_psram/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_psram/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_ringbuf/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_ringbuf/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_rom/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_rom/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_security/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_security/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_system/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_system/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_system/port/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_system/port/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_system/port/soc/esp32/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_system/port/soc/esp32/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_timer/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_timer/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_vfs_console/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_vfs_console/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esp_wifi/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esp_wifi/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/espcoredump/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/espcoredump/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/esptool_py/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/esptool_py/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/fatfs/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/fatfs/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/freertos/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/freertos/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/hal/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/hal/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/heap/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/heap/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/http_parser/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/http_parser/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/idf_test/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/idf_test/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/ieee802154/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/ieee802154/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/json/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/json/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/log/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/log/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/lwip/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/lwip/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/3rdparty/everest/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/3rdparty/everest/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/error.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/error.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/psa_crypto_driver_wrappers_no_static.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/psa_crypto_driver_wrappers_no_static.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/ssl_debug_helpers_generated.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/ssl_debug_helpers_generated.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/version_features.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/library/version_features.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/mqtt/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/mqtt/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/newlib/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/newlib/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/newlib/src/port/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/newlib/src/port/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/nvs_flash/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/nvs_flash/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/nvs_sec_provider/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/nvs_sec_provider/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/openthread/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/openthread/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/partition_table/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/partition_table/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/perfmon/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/perfmon/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/protobuf-c/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/protobuf-c/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/protocomm/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/protocomm/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/pthread/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/pthread/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/rt/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/rt/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/sdmmc/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/sdmmc/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/soc/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/soc/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/spi_flash/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/spi_flash/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/spiffs/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/spiffs/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/tcp_transport/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/tcp_transport/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/ulp/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/ulp/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/unity/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/unity/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/usb/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/usb/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/vfs/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/vfs/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/wear_levelling/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/wear_levelling/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/wifi_provisioning/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/wifi_provisioning/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/wpa_supplicant/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/wpa_supplicant/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/esp-idf/xtensa/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp-idf/xtensa/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gdbinit/gdbinit" beforeDir="false" afterPath="$PROJECT_DIR$/build/gdbinit/gdbinit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gdbinit/symbols" beforeDir="false" afterPath="$PROJECT_DIR$/build/gdbinit/symbols" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kconfigs.in" beforeDir="false" afterPath="$PROJECT_DIR$/build/kconfigs.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kconfigs_projbuild.in" beforeDir="false" afterPath="$PROJECT_DIR$/build/kconfigs_projbuild.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ldgen_libraries" beforeDir="false" afterPath="$PROJECT_DIR$/build/ldgen_libraries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ldgen_libraries.in" beforeDir="false" afterPath="$PROJECT_DIR$/build/ldgen_libraries.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/log/idf_py_stderr_output_14808" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/log/idf_py_stdout_output_14808" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project_description.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/project_description.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/GPIODriver/gpio_driver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/GPIODriver/gpio_driver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/GPIODriver/gpio_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/GPIODriver/gpio_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sdkconfig" beforeDir="false" afterPath="$PROJECT_DIR$/sdkconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="35JTHDlbaRjmewz9tdGeiLS6CSy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/hoangdesamac",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8e5cd53-d5de-4d05-823a-c1772f1ce67e" name="Changes" comment="" />
+      <created>1762827085127</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762827085127</updated>
+    </task>
+    <servers />
+  </component>
+</project>
