@@ -19,7 +19,7 @@ const uint8_t LIMIT_SWITCH_END = 27;
 const uint8_t MOTOR_IN1 = 18;
 const uint8_t MOTOR_IN2 = 19;
 const uint8_t MOTOR_PIN = 2;
-
+const int MOTOR_SPEED = 25; // PWM SPEED (0-255)
 // ===== Motor State=====
 enum MotorState
 {
@@ -43,14 +43,14 @@ void motorStop()
 
 void motorForward()
 { // PHƠI đồ
-    digitalWrite_custom(MOTOR_IN1, HIGH);
+    analogWrite(MOTOR_IN1, MOTOR_SPEED);
     digitalWrite_custom(MOTOR_IN2, LOW);
 }
 
 void motorReverse()
 { // THU đồ
     digitalWrite_custom(MOTOR_IN1, LOW);
-    digitalWrite_custom(MOTOR_IN2, HIGH);
+    analogWrite(MOTOR_IN2, MOTOR_SPEED);
 }
 
 void setup()
