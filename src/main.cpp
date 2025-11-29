@@ -1,122 +1,138 @@
-// HIGHT = Không Mưa/Tối 
-// LOW   = Mưa / Sáng
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include "gpio_driver.h"
 #include "serial_driver.h"
 #include "delay_driver.h"
 
+// ===== LCD =====
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-const uint8_t LDR_DO = 27;
-const uint8_t RAIN_DO = 14;
-// ===== Motor Control via DRV8833 =====
+
+// ===== INPUT SENSOR =====
+const uint8_t LDR_DO  = 26;   
+const uint8_t RAIN_DO = 14;   
+
+// ===== LIMIT SWITCHES =====
+const uint8_t LIMIT_SWITCH_START = 25; 
+const uint8_t LIMIT_SWITCH_END   = 27; 
+
+// ===== MOTOR CONTROL DRV8833 =====
 const uint8_t MOTOR_IN1 = 18;
 const uint8_t MOTOR_IN2 = 19;
 const uint8_t MOTOR_PIN = 2;
-// === MOTOR CONTROL FUNCTIONS ===
+
+// ===== Motor State=====
+enum MotorState {
+    MOTOR_STOPPED,
+    MOTOR_FORWARD, // PHƠI đồ
+    MOTOR_REVERSE  // THU đồ
+};
+
+MotorState currentMotorState = MOTOR_STOPPED;
+
+// ===== LATCH flags =====
+bool startLimitLatched = false;
+bool endLimitLatched   = false;
+
+// ===== MOTOR CONTROL =====
 void motorStop() {
     digitalWrite_custom(MOTOR_IN1, LOW);
     digitalWrite_custom(MOTOR_IN2, LOW);
 }
 
-void motorForward() {
+void motorForward() { // PHƠI đồ
     digitalWrite_custom(MOTOR_IN1, HIGH);
     digitalWrite_custom(MOTOR_IN2, LOW);
 }
 
-void motorReverse() {
+void motorReverse() { // THU đồ
     digitalWrite_custom(MOTOR_IN1, LOW);
     digitalWrite_custom(MOTOR_IN2, HIGH);
 }
 
-void setup()
-{
+void setup() {
     Serial.begin(9600);
-    delay(500); // Đợi Serial khởi động
-    
-    Serial.println("\n\n=== SYSTEM STARTING ===");
-    
+    delay(500);
+
     Wire.begin(21, 22);
-    
-    // LCD khởi tạo
     lcd.init();
-    lcd.backlight(); // Bật backlight
+    lcd.backlight();
     lcd.setCursor(0, 0);
     lcd.print("Initializing...");
-    
-    // Cấu hình chân I/O
-    Serial.println("Configuring GPIO pins...");
-    pinMode_custom(LDR_DO, PIN_INPUT);
-    Serial.println("LDR_DO (GPIO 27) set as INPUT");
-    
-    pinMode_custom(RAIN_DO, PIN_INPUT);
-    Serial.println("RAIN_DO (GPIO 14) set as INPUT");
-    
-    pinMode_custom(MOTOR_PIN, PIN_OUTPUT);
-    Serial.println("MOTOR_PIN (GPIO 2) set as OUTPUT");
 
+    // ===== Pin configuration =====
+    pinMode_custom(LDR_DO, PIN_INPUT);
+    pinMode_custom(RAIN_DO, PIN_INPUT);
+    pinMode_custom(MOTOR_PIN, PIN_OUTPUT);
     pinMode_custom(MOTOR_IN1, PIN_OUTPUT);
     pinMode_custom(MOTOR_IN2, PIN_OUTPUT);
-    Serial.println("MOTOR_IN1 (GPIO 18) and MOTOR_IN2 (GPIO 19) set as OUTPUT");
+    pinMode(LIMIT_SWITCH_START, INPUT_PULLUP);
+    pinMode(LIMIT_SWITCH_END, INPUT_PULLUP);
 
-    
-        // Test: Quay motor 2 giây tiến, 2 giây lùi
-    Serial.println("\n>>> TEST: Motor forward 2s...");
-    motorForward();
-    delay_custom(2000);
-
-    Serial.println(">>> TEST: Motor reverse 2s...");
-    motorReverse();
-    delay_custom(2000);
-
-    motorStop();
-    Serial.println(">>> TEST: Motor stopped\n");
-
-
-    // LCD khởi tạo lại
+    // ===== LCD Shown =====
     lcd.clear();
     lcd.setCursor(0, 0);
-    lcd.print("LDR:     ");   // Thêm khoảng trắng để xóa dữ liệu cũ
+    lcd.print("LDR: ");
     lcd.setCursor(0, 1);
-    lcd.print("RAIN:    "); 
+    lcd.print("RAIN:");
+
     Serial.println("=== SETUP COMPLETE ===\n");
 }
 
-void loop()
-{
-    int valueLDR = digitalRead_custom(LDR_DO);
+void loop() {
+    // ===== Read Sensor =====
+    int valueLDR  = digitalRead_custom(LDR_DO);
     int valueRAIN = digitalRead_custom(RAIN_DO);
+    // ===== Read Limit Switches =====
+    int startPressed = digitalRead(LIMIT_SWITCH_START);
+    int endPressed   = digitalRead(LIMIT_SWITCH_END);
 
-    // In debug thông tin
-    Serial.print("LDR=");
-    Serial.print(valueLDR);
-    Serial.print(" (");
-    Serial.print(valueLDR == HIGH ? "DARK" : "LIGHT"); // Sửa lại để dễ hiểu hơn
-    Serial.print(") | RAIN=");
-    Serial.print(valueRAIN);
-    Serial.print(" (");
-    Serial.print(valueRAIN == LOW ? "RAIN" : "NO RAIN"); // Sửa lại để dễ hiểu hơn
-    Serial.print(") | ");
+    // ===== Definite Motor Direction Logic =====
+    MotorState desiredMotorState =
+        (valueLDR == HIGH && valueRAIN == HIGH) ? MOTOR_FORWARD : MOTOR_REVERSE;
 
-        // Điều khiển motor qua DRV8833
-    if (valueLDR == HIGH || valueRAIN == LOW)
-    {
-        motorReverse(); // Thu đồ
-        Serial.println("=> MOTOR: THU (reverse)");
+    // ===== Reset latch=====
+    // (Reset Latch In Reverse Direction)
+    if (desiredMotorState == MOTOR_FORWARD && currentMotorState != MOTOR_FORWARD) {
+        startLimitLatched = false;
     }
-    else
-    {
-        motorForward(); // Phơi đồ
-        Serial.println("=> MOTOR: PHƠI (forward)");
+    if (desiredMotorState == MOTOR_REVERSE && currentMotorState != MOTOR_REVERSE) {
+        endLimitLatched = false;
     }
 
+    // ===== Motor Stopped Logic For latch =====
+    if ((desiredMotorState == MOTOR_REVERSE && startPressed && !startLimitLatched) ||
+        (desiredMotorState == MOTOR_FORWARD && endPressed && !endLimitLatched)) {
+        motorStop();
+        currentMotorState = MOTOR_STOPPED;
+
+        if (desiredMotorState == MOTOR_REVERSE) startLimitLatched = true;
+        if (desiredMotorState == MOTOR_FORWARD) endLimitLatched = true;
+    }
+    else if (currentMotorState == MOTOR_STOPPED &&
+             !startLimitLatched && !endLimitLatched) {
+        // Motor Run Without Latch
+        if (desiredMotorState == MOTOR_FORWARD) motorForward();
+        else motorReverse();
+        currentMotorState = desiredMotorState;
+    }
+    else if (desiredMotorState != currentMotorState &&
+             !startLimitLatched && !endLimitLatched) {
+        motorStop();
+        delay_custom(500);
+        if (desiredMotorState == MOTOR_FORWARD) motorForward();
+        else motorReverse();
+        currentMotorState = desiredMotorState;
+    }
+
+    // ===== LCD Modify =====
     lcd.setCursor(5, 0);
-    // Dựa theo comment: HIGH là Tối, LOW là Sáng
-    lcd.print(valueLDR == HIGH ? "DARK" : "LIGHT");
-
+    lcd.print(valueLDR == HIGH ? "DARK " : "LIGHT");
     lcd.setCursor(5, 1);
-    // Dựa theo comment: LOW là Mưa
-    lcd.print(valueRAIN == LOW ? "RAIN" : "NO RAIN");
+    lcd.print(valueRAIN == LOW ? "RAIN " : "CLEAR");
 
-    delay_custom(500);
+    lcd.setCursor(12, 0);
+    lcd.print(startPressed ? "STOP" : "OK  ");
+    lcd.setCursor(12, 1);
+    lcd.print(endPressed ? "STOP" : "OK  ");
+    delay_custom(300);
 }
