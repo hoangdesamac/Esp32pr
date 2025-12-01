@@ -18,7 +18,11 @@ const uint8_t LIMIT_SWITCH_END = 27;
 const uint8_t MOTOR_IN1 = 18;
 const uint8_t MOTOR_IN2 = 19;
 const uint8_t MOTOR_PIN = 2;
+<<<<<<< HEAD
 const int MOTOR_SPEED = 25; // PWM Speed (0-255)
+=======
+
+>>>>>>> 7097ce162fe2d8ee70c7888aff7c18aaf31aaafc
 // ===== Motor State=====
 enum MotorState {
   MOTOR_STOPPED,
@@ -44,8 +48,13 @@ void motorForward() { // PHƠI đồ
 }
 
 void motorReverse() { // THU đồ
+<<<<<<< HEAD
   digitalWrite_custom(MOTOR_IN1, LOW);
   analogWrite(MOTOR_IN2, MOTOR_SPEED);
+=======
+    digitalWrite_custom(MOTOR_IN1, LOW);
+    digitalWrite_custom(MOTOR_IN2, HIGH);
+>>>>>>> 7097ce162fe2d8ee70c7888aff7c18aaf31aaafc
 }
 
 void setup() {
@@ -88,11 +97,17 @@ void loop() {
   int startPressed = digitalRead(LIMIT_SWITCH_START);
   int endPressed = digitalRead(LIMIT_SWITCH_END);
 
+<<<<<<< HEAD
   // ===== Definite Motor Direction Logic =====
   // Logic: Trời sáng (LOW?) VÀ Không mưa (HIGH?) -> Phơi đồ (FORWARD)
   // Ngược lại -> Thu đồ (REVERSE)
   MotorState desiredMotorState =
       (valueLDR == LOW && valueRAIN == HIGH) ? MOTOR_FORWARD : MOTOR_REVERSE;
+=======
+    // ===== Definite Motor Direction Logic =====
+    MotorState desiredMotorState =
+        (valueLDR == LOW && valueRAIN == HIGH) ? MOTOR_FORWARD : MOTOR_REVERSE;
+>>>>>>> 7097ce162fe2d8ee70c7888aff7c18aaf31aaafc
 
   // ===== State Machine =====
   switch (currentMotorState) {
