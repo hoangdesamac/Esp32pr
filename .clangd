@@ -1,2 +1,32 @@
 CompileFlags:
-    Remove: [-f*, -m*]
+  Add:
+    # --- CÁC CỜ QUAN TRỌNG ĐỂ SỬA LỖI ---
+    - "-xc++" # <--- Bắt buộc clangd đọc file này là C++
+    - "-std=gnu++17" # <--- Sử dụng chuẩn C++17 (Chuẩn của ESP32)
+    - "--driver-mode=g++"
+
+    # --- Các đường dẫn include (giữ nguyên của bạn) ---
+    - "-I/home/hoangdesamac/.platformio/packages/framework-arduinoespressif32/cores/esp32"
+    - "-I/home/hoangdesamac/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include"
+    - "-I/home/hoangdesamac/.platformio/packages/framework-arduinoespressif32/variants/esp32"
+
+    # Định nghĩa Macro
+    - "-DARDUINO=10800"
+    - "-DESP32"
+    - "-DCORE_DEBUG_LEVEL=0"
+
+  Remove:
+    - "-mlongcalls"
+    - "-mtext-section-literals"
+    - "-fno-tree-loop-distribute-patterns"
+    - "-mfix-esp32-psram-cache-issue"
+    - "-mfix-esp32-psram-cache-strategy=memw"
+    # Hai cờ mới bạn vừa báo:
+    - "-fstrict-volatile-bitfields"
+    - "-fno-tree-switch-conversion"
+
+Diagnostics:
+  Suppress:
+    - "drv_unknown_argument"
+    - "unknown_typename"
+    - "pp_file_not_found" # Tạm ẩn lỗi không tìm thấy file nếu chưa index xong
